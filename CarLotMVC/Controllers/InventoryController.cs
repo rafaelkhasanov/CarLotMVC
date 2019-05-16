@@ -18,14 +18,14 @@ namespace CarLotMVC.Controllers
         private readonly InventoryRepo _repo = new InventoryRepo();
         
         // GET: Inventory
-        [HttpPost]
+        
         public ActionResult Index()
         {
-            return View("Foo", _repo.GetAll());
+            return View(_repo.GetAll());
         }
 
         // GET: Inventory/Details/5
-        [HttpPost]
+        
         public ActionResult Details(int? id)
         {
             if (id == null)
